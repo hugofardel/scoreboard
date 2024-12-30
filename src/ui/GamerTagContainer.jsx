@@ -5,12 +5,15 @@ const GamerTagContainer = styled.div`
 	align-items: center;
 	gap: 1.5rem;
 	width: fit-content;
-	background-color: #f0f0f0;
-	border-radius: 20px;
 	padding: 0.8rem 1.5rem;
 	margin: 5px;
 	font-size: 1.5rem;
-	color: #333;
+
+	color: white;
+	background-color: ${({ colors }) => (colors?.backgroundColor ? colors.backgroundColor : "var(--color-grey-600)")};
+	border-color: ${({ colors }) => (colors?.borderColor ? colors.borderColor : "var(--color-grey-600)")};
+	border: 1px solid;
+	border-radius: 20px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
 	@media (max-width: 767px) {

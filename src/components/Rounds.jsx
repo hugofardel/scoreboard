@@ -32,7 +32,7 @@ const Rounds = () => {
 	}
 
 	return (
-		<div>
+		<>
 			<Title>Manche {rounds + 1}</Title>
 			<ul>
 				{players.map((player) => (
@@ -51,7 +51,7 @@ const Rounds = () => {
 				<Button onClick={handleNewRound}>Nouvelle Manche</Button>
 				<Button onClick={handleEndGame}>Fin de la partie</Button>
 			</ButtonGroup>
-		</div>
+		</>
 	);
 };
 

@@ -5,6 +5,7 @@ import Button from "../ui/Button.jsx";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import AddPlayerField from "../components/AddPlayerField.jsx";
+import { COLORS } from "../helpers.js";
 
 const StyledSettingUpView = styled.div`
 	display: flex;
@@ -38,8 +39,14 @@ const SettingUpView = () => {
 
 			<AddPlayerField addNewPlayer={addPlayer} />
 			<PlayersList>
-				{players.map((player) => (
-					<PlayerTag key={player.id} name={player.name} showDelete={true} onDelete={() => removePlayer(player.id)} />
+				{players.map((player, index) => (
+					<PlayerTag
+						key={player.id}
+						colors={COLORS[index]}
+						name={player.name}
+						showDelete={true}
+						onDelete={() => removePlayer(player.id)}
+					/>
 				))}
 			</PlayersList>
 

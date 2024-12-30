@@ -3,9 +3,9 @@ import GamerTagContainer from "../ui/GamerTagContainer.jsx";
 import PlayerName from "../ui/PlayerName.jsx";
 import UserIcon from "../ui/UserIcon.jsx";
 
-const PlayerTag = ({ name, onDelete, showDelete }) => {
+const PlayerTag = ({ name, colors, onDelete, showDelete }) => {
 	return (
-		<GamerTagContainer>
+		<GamerTagContainer colors={colors}>
 			<PlayerName>
 				<UserIcon /> {name}
 			</PlayerName>

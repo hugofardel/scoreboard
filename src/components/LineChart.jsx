@@ -4,7 +4,6 @@ import { Line } from "react-chartjs-2";
 ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement, Legend, Tooltip);
 
 const LineChart = ({ labelsX = [], datasets = [] }) => {
-	console.log(datasets);
 	const data = {
 		labels: labelsX,
 		datasets: datasets,

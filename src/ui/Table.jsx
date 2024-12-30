@@ -56,11 +56,9 @@ const TrophyCell = styled(TableCell)`
 	${({ position }) => {
 		if (position === 1) {
 			return `color: #ffd700;`;
-		}
-		if (position === 2) {
+		} else if (position === 2) {
 			return `color: #c0c0c0;`;
-		}
-		if (position === 3) {
+		} else if (position === 3) {
 			return `color: #cd7f32;`;
 		}
 	}}

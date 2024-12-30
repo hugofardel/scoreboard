@@ -5,7 +5,7 @@ const ButtonGroup = styled.div`
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
-	gap: 1.5rem;
+	gap: 1rem;
 	margin-top: 2rem;
 `;
 

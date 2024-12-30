@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import Input from "../ui/Input.jsx";
 import Button from "../ui/Button.jsx";
+import { FaPlus } from "react-icons/fa";
 
 const StyledAddPlayer = styled.div`
 	display: flex;
@@ -49,7 +50,7 @@ const AddPlayerField = ({ addNewPlayer }) => {
 					onChange={(e) => setPlayerName(e.target.value)}
 				/>
 				<Button onClick={() => addPlayerToList(playerName)} disabled={!playerName}>
-					Ajouter
+					<FaPlus />
 				</Button>
 			</StyledFlexRow>
 		</StyledAddPlayer>

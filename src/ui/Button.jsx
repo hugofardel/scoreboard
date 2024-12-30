@@ -35,8 +35,12 @@ const variations = {
 		color: var(--color-brand-50);
 		background-color: var(--btn-color);
 
-		&:hover {
+		&:not(:disabled):hover {
 			background-color: var(--color-brand-700);
+		}
+
+		&:disabled {
+			opacity: 0.75;
 		}
 	`,
 	secondary: css`

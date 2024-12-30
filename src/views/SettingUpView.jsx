@@ -11,10 +11,15 @@ const StyledSettingUpView = styled.div`
 	flex-direction: column;
 	gap: 1.5rem;
 	max-width: 1220px;
-	min-height: 100vh;
 	padding-top: 10rem;
 	margin: 0 auto;
 	text-align: center;
+`;
+
+const Title = styled.div`
+	font-size: 2.5rem;
+	margin: 1.5rem 0;
+	color: var(--btn-color);
 `;
 
 const SettingUpView = () => {
@@ -29,6 +34,8 @@ const SettingUpView = () => {
 
 	return (
 		<StyledSettingUpView>
+			<Title>Ajouter les joueurs !</Title>
+
 			<AddPlayerField addNewPlayer={addPlayer} />
 			<PlayersList>
 				{players.map((player) => (

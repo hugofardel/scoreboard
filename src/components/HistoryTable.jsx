@@ -2,7 +2,9 @@ import { useGameActions } from "../hook/useGameActions.js";
 import { Table, TableCell, TableContainer, TableRow, THead, TRHeader } from "../ui/Table.jsx";
 
 const HistoryTable = () => {
-	const { players, rounds } = useGameActions();
+	const { players, rounds, status } = useGameActions();
+
+	const ROUNDS_DISPLAY = status === "END" ? rounds + 1 : rounds;
 
 	return (
 		<TableContainer>
@@ -16,7 +18,7 @@ const HistoryTable = () => {
 					</TRHeader>
 				</THead>
 				<tbody>
-					{Array.from({ length: rounds + 1 }).map((_, roundIndex) => (
+					{Array.from({ length: ROUNDS_DISPLAY }).map((_, roundIndex) => (
 						<TableRow key={roundIndex}>
 							<TableCell>{roundIndex + 1}</TableCell>
 							{players.map((player) => (

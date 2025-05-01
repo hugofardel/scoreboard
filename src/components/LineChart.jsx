@@ -11,12 +11,13 @@ const LineChart = ({ labelsX = [], datasets = [] }) => {
 
 	const options = {
 		responsive: true,
+		maintainAspectRatio: false,
 		plugins: {
 			legend: {
 				position: "top",
 				labels: {
 					font: {
-						size: 20,
+						size: 18,
 					},
 					color: "white",
 				},
@@ -32,7 +33,7 @@ const LineChart = ({ labelsX = [], datasets = [] }) => {
 			x: {
 				ticks: {
 					font: {
-						size: 18,
+						size: 16,
 					},
 					color: "white",
 				},
@@ -43,7 +44,7 @@ const LineChart = ({ labelsX = [], datasets = [] }) => {
 			y: {
 				ticks: {
 					font: {
-						size: 18,
+						size: 16,
 					},
 					color: "white",
 				},
@@ -54,7 +55,7 @@ const LineChart = ({ labelsX = [], datasets = [] }) => {
 		},
 	};
 
-	return <Line data={data} options={options} />;
+	return <Line data={data} options={options} style={{ minHeight: "500px" }} />;
 };
 
 export default LineChart;

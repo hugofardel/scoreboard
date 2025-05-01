@@ -22,7 +22,7 @@ const GraphicView = () => {
 
 	return (
 		<Row>
-			<Box>
+			<Box style={{ overflowX: "auto" }}>
 				<LineChart labelsX={labelsX} datasets={datasets} />
 			</Box>
 		</Row>

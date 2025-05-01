@@ -38,7 +38,7 @@ const StyledNavLink = styled(NavLink)`
 		gap: 5px;
 
 		color: var(--color-grey-600);
-		font-size: 0.8rem;
+		font-size: 0.9rem;
 		font-weight: 500;
 		padding: 0.8rem 1rem;
 		transition: all 0.3s;

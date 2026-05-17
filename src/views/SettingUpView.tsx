@@ -1,5 +1,5 @@
+import PlayerTag from "@/components/PlayerTag";
 import { Button } from "@/components/ui/button";
-import PlayerTag from "@/ui/PlayerTag";
 import { useNavigate } from "react-router-dom";
 import AddPlayerField from "../components/AddPlayerField";
 import { COLORS } from "../helpers";

@@ -1,6 +1,6 @@
 import { GameProvider } from "@/contexts/GameContext";
 // import GlobalStyles from "@/styles/GlobalStyles";
-import AppLayout from "@/ui/AppLayout";
+import AppLayout from "@/components/layout/AppLayout";
 import GraphicView from "@/views/GraphicView";
 import HistoryView from "@/views/HistoryView";
 import LeaderboardView from "@/views/LeaderboardView";

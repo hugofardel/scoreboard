@@ -1,5 +1,5 @@
 import { useGameActions } from "../hooks/useGameActions";
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Th } from "../ui/Table";
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Th } from "./Table";
 
 const HistoryTable = () => {
 	const { players, rounds, status } = useGameActions();

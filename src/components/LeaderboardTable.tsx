@@ -1,5 +1,5 @@
 import { useGameActions } from "../hooks/useGameActions";
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Th, Trophy } from "../ui/Table";
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Th, Trophy } from "./Table";
 
 const LeaderboardTable = () => {
 	const { players, wins } = useGameActions();

@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import MobileBottomBar from "../components/MobileBottomBar";
+import MobileBottomBar from "./MobileBottomBar";
 import Navbar from "./Navbar";
 
 const AppLayout = () => {

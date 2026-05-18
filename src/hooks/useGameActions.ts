@@ -17,14 +17,6 @@ export const useGameActions = () => {
 		dispatch({ type: "CHANGE_STATUS", payload: { status } });
 	}
 
-	function addRound() {
-		dispatch({ type: "ADD_ROUND" });
-	}
-
-	function updateScore(playerId: string, roundIndex: number, score: number) {
-		dispatch({ type: "UPDATE_SCORE", payload: { roundIndex, playerId, score } });
-	}
-
 	function updateScoresRound(scores: ItemScore[]) {
 		dispatch({ type: "UPDATE_SCORES_ROUND", payload: { scores } });
 	}
@@ -45,8 +37,6 @@ export const useGameActions = () => {
 		addPlayer,
 		removePlayer,
 		changeStatus,
-		addRound,
-		updateScore,
 		updateScoresRound,
 		updateWinnerRound,
 		retry,

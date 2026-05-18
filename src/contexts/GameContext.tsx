@@ -30,51 +30,23 @@ function gameReducer(state: GameState, action: GameAction): GameState {
 				status: action.payload.status,
 			};
 
-		case "ADD_ROUND":
-			return {
-				...state,
-				rounds: state.rounds + 1,
-				players: state.players.map((player: Player) => ({
-					...player,
-					scores: [...player.scores, 0],
-				})),
-			};
-
-		case "UPDATE_SCORE": {
-			const { playerId, roundIndex, score } = action.payload;
-			return {
-				...state,
-				players: state.players.map((player: Player) =>
-					player.id === playerId
-						? {
-							...player,
-							scores: player.scores.map((s, index) => (index === roundIndex ? score : s)),
-							totalScore: player.scores.reduce((sum, s, index) => (index === roundIndex ? sum + score : sum + s), 0),
-						}
-						: player,
-				),
-			};
-		}
-
 		case "UPDATE_SCORES_ROUND": {
 			const { scores } = action.payload;
 
 			return {
 				...state,
+				rounds: state.rounds + 1,
 				players: state.players.map((player) => {
 					const score = scores.find((s) => s.id === player.id);
-
 					if (!score) return player;
 
 					const nextScores = [...player.scores];
-					nextScores[state.rounds] = score.value;
-
-					console.log(nextScores, state.rounds);
+					nextScores.push(score.value);
 
 					return {
 						...player,
 						scores: nextScores,
-						totalScore: nextScores.reduce((a, b) => a + b, 0),
+						totalScore: player.totalScore + score.value,
 					};
 				})
 			}

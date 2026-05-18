@@ -1,3 +1,6 @@
+import type { RechartsData } from "./types/chart";
+import type { Player } from "./types/player";
+
 export type Color = {
 	borderColor: string;
 	backgroundColor: string;
@@ -65,3 +68,13 @@ export const COLORS: Color[] = [
 		backgroundColor: "rgba(34,139,34,0.2)",
 	},
 ];
+
+export function transformScoresToDataGraph(players: Player[], rounds: number): RechartsData[] {
+	return Array.from({ length: rounds }, (_, roundIndex) => {
+		const roundData: RechartsData = { round: `Round ${roundIndex + 1}` };
+		players.forEach((player) => {
+			roundData[player.name] = player.scores[roundIndex] ?? 0;
+		});
+		return roundData;
+	});
+}

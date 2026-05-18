@@ -66,6 +66,6 @@ export function DrawerDialog({ title, description, triggerLabel, open, setOpen, 
                     </DrawerClose>
                 </DrawerFooter>
             </DrawerContent>
-        </Drawer>
+        </Drawer >
     )
 }

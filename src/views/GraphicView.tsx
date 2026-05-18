@@ -1,11 +1,11 @@
-import MyChart from "@/components/MyChart";
+import LineChartScore from "@/components/LineChartScore";
 import { useRedirectToSettings } from "../hooks/useRedirectToSettings";
 
 const GraphicView = () => {
 	useRedirectToSettings();
 
 	return (
-		<MyChart />
+		<LineChartScore />
 	);
 };
 

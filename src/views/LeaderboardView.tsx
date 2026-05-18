@@ -27,12 +27,12 @@ const LeaderboardView = () => {
 	}
 
 	return (
-		<div className="flex flex-col md:flex-row h-full justify-between items-stretch divide-x space-x-12">
+		<div className="flex flex-col md:flex-row h-full justify-between items-stretch divide-x gap-12">
 			<div className="bg-card text-card-foreground rounded-md max-w-full flex-1">
 				<LeaderboardTable />
 			</div>
 
-			<div className="w-fit p-2 pl-0 flex flex-col gap-4">
+			<div className="w-full md:w-fit p-2 pl-0 flex flex-row justify-center md:justify-start md:flex-col gap-4">
 				{status === "FINISHED" ? (
 					<>
 						<Button onClick={retry}>Recommencer</Button>

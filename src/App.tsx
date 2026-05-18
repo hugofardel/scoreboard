@@ -1,6 +1,5 @@
-import { GameProvider } from "@/contexts/GameContext";
-// import GlobalStyles from "@/styles/GlobalStyles";
 import AppLayout from "@/components/layout/AppLayout";
+import { GameProvider } from "@/contexts/GameContext";
 import GraphicView from "@/views/GraphicView";
 import HistoryView from "@/views/HistoryView";
 import LeaderboardView from "@/views/LeaderboardView";
@@ -11,8 +10,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
 	return (
 		<GameProvider>
-			{/* <GlobalStyles /> */}
-
 			<BrowserRouter>
 				<Routes>
 					<Route index element={<SettingUpView />} />

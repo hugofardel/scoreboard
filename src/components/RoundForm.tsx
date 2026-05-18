@@ -15,8 +15,6 @@ export type ItemScore = {
 
 function RoundForm({ close, className }: React.ComponentProps<"form"> & Props) {
     const { players, updateScoresRound, updateWinnerRound } = useGameActions();
-
-    // new model
     const [scores, setScores] = useState<ItemScore[]>(players.map((p) => { return { id: p.id, value: 0 } }));
     const [roundWinner, setRoundWinner] = useState<string | undefined>();
 

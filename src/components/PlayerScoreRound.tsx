@@ -26,9 +26,9 @@ const PlayerScoreRound = ({ currentScore, playerName, handleClickWinner, handleC
 					inputMode="numeric"
 					placeholder="points"
 					disabled={isWinner}
-					name={playerName}
 					value={currentScore}
 					onChange={(e) => handleCurrentScore(e.target.value)}
+					onFocus={(e) => e.target.select()}
 				/>
 				<Button
 					size="sm"

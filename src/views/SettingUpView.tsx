@@ -15,7 +15,7 @@ const SettingUpView = () => {
 	}
 
 	return (
-		<div className="flex flex-col gap-3.5 max-w-7xl p-4 mx-auto text-center">
+		<div className="flex flex-col gap-3.5 max-w-7xl p-4 mx-auto text-center min-h-svh justify-center overflow-auto">
 			<div className="text-2xl my-2 text-foreground">Ajouter les joueurs !</div>
 			<AddPlayerField addNewPlayer={addPlayer} />
 

@@ -36,7 +36,7 @@ export function DrawerDialog({ title, description, triggerLabel, open, setOpen, 
         return (
             <Dialog open={open} onOpenChange={setOpen}>
                 <DialogTrigger asChild>
-                    <Button variant="outline">{triggerLabel}</Button>
+                    <Button>{triggerLabel}</Button>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-106 px-4">
                     <DialogHeader>
@@ -52,7 +52,7 @@ export function DrawerDialog({ title, description, triggerLabel, open, setOpen, 
     return (
         <Drawer open={open} onOpenChange={setOpen}>
             <DrawerTrigger asChild>
-                <Button variant="outline">{triggerLabel}</Button>
+                <Button>{triggerLabel}</Button>
             </DrawerTrigger>
             <DrawerContent className="px-4">
                 <DrawerHeader className="text-left">
@@ -66,6 +66,6 @@ export function DrawerDialog({ title, description, triggerLabel, open, setOpen, 
                     </DrawerClose>
                 </DrawerFooter>
             </DrawerContent>
-        </Drawer >
+        </Drawer>
     )
 }

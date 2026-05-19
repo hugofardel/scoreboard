@@ -42,8 +42,8 @@ function RoundForm({ close, className }: React.ComponentProps<"form"> & Props) {
     }
 
     return (
-        <form className={cn("grid items-start gap-6", className)} onSubmit={handleSubmit}>
-            <ul className="overflow-auto max-h-[60dvh]">
+        <form className={cn("grid items-start gap-6 overflow-y-auto", className)} onSubmit={handleSubmit}>
+            <ul className="">
                 {players.map((player, i) => (
                     <PlayerScoreRound
                         key={player.id}

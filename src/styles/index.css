@@ -180,6 +180,11 @@
 	body {
 		@apply bg-background text-foreground;
 		letter-spacing: var(--tracking-normal);
+		min-height: 100svh;
+	}
+
+	#root {
+		min-height: 100svh;
 	}
 }
 

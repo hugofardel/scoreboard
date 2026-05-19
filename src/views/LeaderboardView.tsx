@@ -32,7 +32,7 @@ const LeaderboardView = () => {
 				<LeaderboardTable />
 			</div>
 
-			<div className="w-full md:w-fit p-2 pl-0 flex flex-row justify-center md:justify-start md:flex-col gap-4">
+			<div className="w-full md:w-fit p-2 pl-0 flex justify-center md:justify-start flex-col gap-4">
 				{status === "FINISHED" ? (
 					<>
 						<Button onClick={retry}>Recommencer</Button>
